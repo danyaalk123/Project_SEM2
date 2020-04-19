@@ -12,17 +12,17 @@ private:
 	Team Players[2];
 	static Game Instance;
 	int time_to_win=0;
-	int goals_to_win = 0;
+    int goals_to_win = 2;
 	bool game_mode = 0;
 	bool win_condition = 0;
-	int time=0;
+    int time=2;
 	bool possesion = 0;
 	~Game() {};
 public:
 	static Game& Get();
 	Game( const Game&) = delete;
 	void timer();
-	bool coin_toss();
+    void coin_toss();
 	void switch_possesion();
 	int get_remainder(bool,int);
 	bool tackle(int,int,int);
@@ -35,6 +35,7 @@ public:
 	int get_time_to_win();
 	int get_goals_to_win();
 	bool GameOver();
+    bool GetWinCondition();
 };
 
 

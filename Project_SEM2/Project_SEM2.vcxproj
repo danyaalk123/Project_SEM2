@@ -22,20 +22,32 @@
     <ClCompile Include="Dice.cpp" />
     <ClCompile Include="Error_Handeling.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Interface.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="game_options.cpp" />
+    <ClCompile Include="maingame.cpp" />
+    <ClCompile Include="mainmenu.cpp" />
     <ClCompile Include="Prime_Number.cpp" />
     <ClCompile Include="Randomiser.cpp" />
     <ClCompile Include="Team.cpp" />
+    <ClCompile Include="wincondition.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dice.h" />
     <ClInclude Include="Error_Handeling.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Interface.h" />
+    <ClInclude Include="game_options.h" />
+    <ClInclude Include="maingame.h" />
+    <ClInclude Include="mainmenu.h" />
     <ClInclude Include="Prime_Number.h" />
     <ClInclude Include="Randomiser.h" />
     <ClInclude Include="Team.h" />
+    <ClInclude Include="wincondition.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="game_options.ui" />
+    <None Include="maingame.ui" />
+    <None Include="mainmenu.ui" />
+    <None Include="team_select.ui" />
+    <None Include="wincondition.ui" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -106,6 +118,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Qt\5.14.2\msvc2017_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

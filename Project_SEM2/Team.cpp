@@ -15,7 +15,7 @@ Team::Team(string name)
 	this->Goals = 0;
 	this->numPlayers = 0;
 }
-Team::~Team()
+Team::~Team()//
 {
 }
 
@@ -36,10 +36,18 @@ string Team::GetTeamName()
 {
 	return this->teamName;
 }
-void Team::SetNumPlayers(int numPlayers)
+bool Team::SetNumPlayers(int numPlayers)
 {
+    if (numPlayers < 3 || numPlayers >11)
+	{
+		return false;
+	}
+	else
+	{
+		this->numPlayers = numPlayers;
+		return true;
+	}
 	
-	this->numPlayers = numPlayers;
 }
 
 int Team::GetNumPlayers()
@@ -50,13 +58,19 @@ Prime_Number Team::getPrimeNumber()
 {
 	return this->PrimeNumber;
 }
- int Team::GetPlayers(int num)
+int Team::GetPlayers(int num)
 {
 	return this->Players[num];
 }
-void Team::SetPlayers(int players)
+bool Team::SetPlayers(int players)
 {
+    if (PrimeNumber.CheckPrimeNumber(players)){
 	this->Players.push_back(players);
+        return true;
+    }
+    else{
+        return false;
+    }
 
 }
 
@@ -67,4 +81,10 @@ void Team::SetGoals()
 int Team::GetGoals()
 {
 	return this->Goals;
+}
+
+
+vector <int> Team::GetAllPlayers()
+{
+    return this->Players;
 }

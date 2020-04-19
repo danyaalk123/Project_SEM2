@@ -18,7 +18,7 @@ void Dice::diceroll()
 //Getter
 string Dice::getState()
 {
-	return states[Dice::index];
+    return states[Dice::index];
 }
 
 int Dice::getIndex()
